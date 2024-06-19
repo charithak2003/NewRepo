@@ -18,7 +18,6 @@
     <None Include="Views\Publisher\Add.cshtml" />
     <None Include="Views\Publisher\Edit.cshtml" />
     <None Include="Views\Publisher\GetAllPublishers.cshtml" />
-    <None Include="Views\Report\Add.cshtml" />
     <None Include="Views\Report\Edit.cshtml" />
     <None Include="Views\Report\GetAllReports.cshtml" />
     <None Include="Views\Shared\Error.cshtml" />
