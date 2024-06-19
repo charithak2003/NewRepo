@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Library1.Models.AddReportViewModel
+<style>
+    form {
+        justify-content: center;
+        background-color: white;
+        padding: 20px;
+    }
+
+
+    h1 {
+        text-align: center
+    }
+
+    body {
+        background-color: aliceblue;
+    }
+
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+
+<form method="post">
+    <h1>Add Reports</h1>
+    <div class="mt-3">
+        <label class="form-label">Student Id</label>
+        <input type="text" class="form-control" asp-for="Student_Id" required />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Book Id</label>
+        <input type="text" class="form-control" asp-for="Book_Id" required />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Issue Date</label>
+        <input type="date" class="form-control" asp-for="Issue_date" required />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Return Date</label>
+        <input type="date" class="form-control" asp-for="Return_date" required />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Penalty</label>
+        <input type="date" class="form-control" asp-for="Penalty" required />
+    </div>
+
+
+    <br />
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Save</button>
+    </div>
+
+
+</form>
+

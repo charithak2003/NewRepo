@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Library1.Models.Publisher>
+<style>
+    /* Style the table */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-family: Arial, sans-serif;
+    }
+
+        /* Style table header */
+        .table th {
+            background-color: mediumpurple;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        /* Style table rows */
+        .table td {
+            border-bottom: 1px solid #ddd;
+            padding: 8px 15px;
+        }
+
+        /* Style alternating rows */
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+    /* Style edit button */
+    .btn-primary {
+        background-color: deepskyblue;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+
+<h1>Get All Publishers</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Publisher Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Phone</td>
+                <td>@item.Address</td>
+
+                <td>
+                    <a class="btn btn-primary" asp-controller="Publisher" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
