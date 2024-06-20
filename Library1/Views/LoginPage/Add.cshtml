@@ -1,0 +1,56 @@
+﻿@model Library1.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Add";
+}
+<style>
+    .row{
+        justify-content:center;
+
+    }
+    h1{
+        text-align:center
+    }
+    body{
+        background-color:aliceblue;
+    }
+    input{
+        padding:10px;
+        margin:auto;
+    }
+    .form-horizontal{
+        background-color:white;
+        padding:20px;
+    }
+    button{
+        cursor:pointer;
+    }
+</style>
+
+<br />
+<body>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Authentication" asp-action="Add" method="post" class="form-horizontal">
+                <h1>
+                    LOGIN
+                </h1>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <br />
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>

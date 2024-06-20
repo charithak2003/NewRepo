@@ -2,15 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">East West College Library</h1>
-</div>
-
-
-@{
-
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,60 +11,102 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BankingSystems.styles.css" asp-append-version="true" />
-    <script>
+    <style>
+        /* Custom Navbar Styles */
+        .navbar {
+            background-color: #f8f9fa;
+        }
 
-    </script>
+        .navbar-nav .nav-link {
+            color: #007bff;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #0056b3;
+            }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .display-4 {
+            margin-top: 20px;
+            color: #343a40;
+        }
+
+        .lead {
+            margin-bottom: 40px;
+            color: #6c757d;
+        }
+
+    </style>
 </head>
 <body>
     <header>
+        <!-- Navbar Section -->
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Author">LMS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <!-- Branding/Logo -->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">East West College Library</a>
+
+                <!-- Navbar Toggler for Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ol class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Author" asp-action="GetAllAuthors">All Authors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Author" asp-action="Add">Add Authors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="GetAllBooks">All Books</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Add">Add Books</a>
-                        </li>
 
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Publisher" asp-action="GetAllPublishers">All Publishers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Publisher" asp-action="Add">Add Publisher</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Report" asp-action="GetAllReports">All Reports</a>
+                            @Html.ActionLink("All Authors", "GetAllAuthors", "Author", new { area = "" }, new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Report" asp-action="Add">Add Report</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Students" asp-action="GetAllStudents">All Students</a>
+                            @Html.ActionLink("Add Author", "Add", "Author", new { area = "" }, new { @class = "nav-link" })
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Students" asp-action="Add">Add Students</a>
+                            @Html.ActionLink("All Books", "GetAllBooks", "Book", new { area = "" }, new { @class = "nav-link" })
                         </li>
-
-
-                    </ol>
+                        <li class="nav-item">
+                            @Html.ActionLink("Add Book", "Add", "Book", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("All Publishers", "GetAllPublishers", "Publisher", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Add Publisher", "Add", "Publisher", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("All Reports", "GetAllReports", "Report", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Add Report", "Add", "Report", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("All Students", "GetAllStudents", "Students", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Add Student", "Add", "Students", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
+        <!-- End Navbar Section -->
+        <!-- Main Content Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="display-4">Welcome to East West College Library</h1>
+                    <p class="lead">Explore our extensive collection of books and manage library resources efficiently.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Content Section -->
     </header>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

@@ -7,27 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Views\Author\Add.cshtml" />
-    <None Include="Views\Author\Edit.cshtml" />
-    <None Include="Views\Author\GetAllAuthors.cshtml" />
-    <None Include="Views\Book\Add.cshtml" />
-    <None Include="Views\Book\Edit.cshtml" />
-    <None Include="Views\Book\GetAllBooks.cshtml" />
-    <None Include="Views\Home\Index.cshtml" />
-    <None Include="Views\Home\Privacy.cshtml" />
-    <None Include="Views\Publisher\Add.cshtml" />
-    <None Include="Views\Publisher\Edit.cshtml" />
-    <None Include="Views\Publisher\GetAllPublishers.cshtml" />
-    <None Include="Views\Shared\Error.cshtml" />
-    <None Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
-    <None Include="Views\Students\Add.cshtml" />
-    <None Include="Views\Students\GetAllStudents.cshtml" />
-    <None Include="Views\_ViewImports.cshtml" />
-    <None Include="Views\_ViewStart.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
