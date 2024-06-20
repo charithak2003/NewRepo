@@ -96,7 +96,8 @@ namespace Library1.Controllers
         {
             if (string.IsNullOrEmpty(searchTerm))
             {
-                return View("GetAllReports", await _context.Reports.Include(r => r.Student).Include(r => r.Book).ToListAsync());
+                await _context.Reports.Include(r => r.Student).Include(r => r.Book).ToListAsync();
+                return View("GetAllReports", "Report");
             }
 
             var reports = await _context.Reports

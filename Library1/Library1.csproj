@@ -18,13 +18,10 @@
     <None Include="Views\Publisher\Add.cshtml" />
     <None Include="Views\Publisher\Edit.cshtml" />
     <None Include="Views\Publisher\GetAllPublishers.cshtml" />
-    <None Include="Views\Report\Edit.cshtml" />
-    <None Include="Views\Report\GetAllReports.cshtml" />
     <None Include="Views\Shared\Error.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
     <None Include="Views\Students\Add.cshtml" />
-    <None Include="Views\Students\Edit.cshtml" />
     <None Include="Views\Students\GetAllStudents.cshtml" />
     <None Include="Views\_ViewImports.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
