@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BankingSystems.styles.css" asp-append-version="true" />
     <style>
+        body{
+            background-color:rgb(218,242,242);
+        }
         /* Custom Navbar Styles */
         .navbar {
-            background-color: #f8f9fa;
+            background-color:antiquewhite;
         }
 
         .navbar-nav .nav-link {
@@ -27,18 +30,20 @@
 
         .navbar-brand {
             font-weight: bold;
+
         }
 
         .display-4 {
             margin-top: 20px;
             color: #343a40;
+            font-size:7rem;
         }
 
         .lead {
             margin-bottom: 40px;
             color: #6c757d;
+            font-size:4rem;
         }
-
     </style>
 </head>
 <body>
@@ -50,8 +55,7 @@
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">East West College Library</a>
 
                 <!-- Navbar Toggler for Mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -98,7 +102,9 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1 class="display-4">Welcome to East West College Library</h1>
+                    <marquee>
                     <p class="lead">Explore our extensive collection of books and manage library resources efficiently.</p>
+                    </marquee>
                 </div>
             </div>
         </div>

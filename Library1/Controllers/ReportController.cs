@@ -25,7 +25,7 @@ namespace Library1.Controllers
         public async Task<IActionResult> Add(AddReportViewModel addReportViewModel)
         {
             if (addReportViewModel.Student_Id <= 0 || addReportViewModel.Book_Id <= 0 ||
-                addReportViewModel.Penalty <= 0 )
+                addReportViewModel.Penalty <= 0)
             {
                 // If any of the required fields are not filled, return to the view with an error message.
                 ModelState.AddModelError("", "All fields are required");
@@ -43,7 +43,7 @@ namespace Library1.Controllers
             await _context.Reports.AddAsync(report);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("GetAllReports","Report");
+            return RedirectToAction("GetAllReports", "Report");
         }
 
         [HttpGet]
@@ -77,7 +77,7 @@ namespace Library1.Controllers
             existingReport.Penalty = report.Penalty;
 
             await _context.SaveChangesAsync();
-            return RedirectToAction("GetAllReports","Report");
+            return RedirectToAction("GetAllReports", "Report");
         }
 
         [HttpPost]
@@ -90,23 +90,6 @@ namespace Library1.Controllers
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction("GetAllReports", "Report");
-        }
-        [HttpGet]
-        public async Task<IActionResult> Search(string searchTerm)
-        {
-            if (string.IsNullOrEmpty(searchTerm))
-            {
-                await _context.Reports.Include(r => r.Student).Include(r => r.Book).ToListAsync();
-                return View("GetAllReports", "Report");
-            }
-
-            var reports = await _context.Reports
-                .Include(r => r.Student)
-                .Include(r => r.Book)
-                .Where(r => r.Student.Name.Contains(searchTerm) || r.Book.Title.Contains(searchTerm))
-                .ToListAsync();
-
-            return View("GetAllReports", "Report");
         }
     }
 }

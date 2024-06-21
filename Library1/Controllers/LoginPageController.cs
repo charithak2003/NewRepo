@@ -33,7 +33,7 @@ namespace Library1.Controllers
                     var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, false, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("GetAllBranches", "Branch");
+                        return RedirectToAction("GetAllAuthors", "Author");
                     }
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                 }
